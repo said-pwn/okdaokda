@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website with Sidebar Navigation</title>
+    <link rel="stylesheet" href="style.css  ">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <h2>Счастье это: </h2>
+            <ul>
+                <li><a href="#section1" onclick="showSection('section1')">OMN Section</a></li>
+                <li><a href="#section2" onclick="showSection('section2')">SBN Section</a></li>
+                <li><a href="#section3" onclick="showSection('section3')">ABD Section</a></li>
+                <li><a href="#section4" onclick="showSection('section4')">NGN Section</a></li>
+                <li><a href="#section5" onclick="showSection('section5')">YNS Section</a></li>
+                <li><a href="#section6" onclick="showSection('section6')">YSF Section</a></li>
+                <li><a href="#section7" onclick="showSection('section7')">SAR Section</a></li>
+                <li><a href="#section8" onclick="showSection('section8')">AZM Section</a></li>
+                <li><a href="#section9" onclick="showSection('section9')">SDZ Section</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section id="section1" class="section">
+                <h1>Отдел Омины</h1>
+                <p></p>
+            </section>
+            
+            <section id="section2" class="section" style="display:none;">
+                <h1>Отдел Сабины</h1>
+                <p></p>
+            </section>
+            
+            <section id="section3" class="section" style="display:none;">
+                <h1>Отдел Абдусамада</h1>
+                <p></p>
+            </section>
+            
+            <section id="section4" class="section" style="display:none;">
+                <h1>Отдел Нигины</h1>
+                <p></p>
+            </section>
+            <section id="section5" class="section" style="display:none;">
+                <h1>Отдел Юнуса</h1>
+                <p></p>
+            </section>
+            <section id="section6" class="section" style="display:none;">
+                <h1>Отдел Юсуфа</h1>
+                <p></p>
+            </section>
+            <section id="section7" class="section" style="display:none;">
+                <h1>Отдел Сардора</h1>
+                <p></p>
+            </section>
+            <section id="section8" class="section" style="display:none;">
+                <h1>Отдел Азима</h1>
+                <p></p>
+            </section>
+            <section id="section9" class="section" style="display:none;">
+                <h1>Отдел Саидазима</h1>
+                <p></p>
+            </section>
+        </div>
+    </div>
+    
+    <!-- JavaScript to show only one section at a time -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            let sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the clicked section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
